@@ -1,21 +1,178 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-html, body {
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #1a1a1a;
   margin: 0;
-  border: 0;
   padding: 0;
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-main {
-  margin: auto;
-  width: 50%;
-  padding: 20px;
+/* Fondo de imagen */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/hdv/assets/img/fondo.jpg') no-repeat center center/cover;
+  opacity: 0.3;
+  z-index: -1;
 }
 
-main > h1 {
+/* Navegación */
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+nav .logo {
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+nav li {
+  margin-left: 150px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.input-group {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+/* Secciones y encabezados */
+h2 {
+  color: #fff;
   text-align: center;
-  font-size: 3.5em;
+  font-size: 1.8em;
+  margin: 20px 0;
+}
+
+h4 {
+  color: #bbb;
+  font-size: 1.2em;
+}
+
+/* Contenedor de Datos Personales */
+.datos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+/* Imagen cuadrada al lado izquierdo */
+.yo {
+  
+  margin-right: 20px;
+  width: 150px; /* Ajusta el tamaño deseado */
+  height: px; /* Ajusta el tamaño deseado */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border: 2px solid #444; /* Borde de la imagen */
+
+}
+
+
+
+/* Tabla de datos */
+.datos-container table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+}
+
+.datos-container th, .datos-container td {
+  padding: 8px;
+  border: 1px solid #555;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.datos-container th {
+  background-color: #444;
+}
+
+.datos-container td {
+  background-color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+  width: 100%;
+}
+
+/* Ajustes de secciones */
+section {
+  padding: 20px;
+  background: rgba(26, 26, 26, 0.8);
+  margin: 10px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Cards de referencias */
+.referencias .card {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px auto;
+  color: #fff;
+  width: 80%;
+  max-width: 300px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .datos-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .yo {
+      margin: 0 auto 20px;
+  }
+
+  .datos-container table {
+      width: 100%;
+  }
 }
