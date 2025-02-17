@@ -23,15 +23,7 @@ body::before {
   z-index: -1;
 }
 
-/* Navegación */
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #333;
-  padding: 10px 20px;
-  width: 100%;
-}
+
 
 nav .logo {
   height: 50px;
